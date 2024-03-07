@@ -11,13 +11,13 @@ import {AuthComponent} from "./auth/auth.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title: string = "ShopOnline";
-  version : number = 1;
+  title: string = "Antoni";
+  version: number = 1;
 
 //   public void printMessage(String message){
 //
 // }
-//   public printMessage (message: string) :number | string{
+//   public printMessage (message: string) :number | string {
 //     if (1 > 0){
 //       return 1;
 //     }else {

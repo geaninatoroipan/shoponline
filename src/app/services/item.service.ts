@@ -8,8 +8,8 @@ import {Item} from "../models/item.model";
 })
 export class ItemService {
   private apiUrl="https://api.codebyte-software.com:2323/api/items"
-  // canal de youtube
-  private itemObservable= new BehaviorSubject<Array<Item>>([])
+  // itemObservable = canal de youtube la care noi ne vom abona, el contine lista de obiecte.
+  private itemObservable = new BehaviorSubject<Array<Item>>([])
   constructor(private httpClient: HttpClient) {
   }
   public create(item: any){
@@ -26,18 +26,18 @@ export class ItemService {
   }
   public delete(id: string){
     return this.httpClient.delete(this.apiUrl + "/" + id);
+
   }
   public read(){
     this.httpClient.get(this.apiUrl).subscribe((response : any) =>{
       console.log(response);
-      // response.data reprezinta lista de elemente din baza de date
-      // .next() este metoda care actualizeaza "canalil de youtube de mai sus"
+      // response.data = reprezinta lista de elemente din baza de date
+      // .next() = este metoda care actualizeaza "canalul de youtube" de mai sus
       this.itemObservable.next(response.data);
     })
   }
-
-  public getItemsList () {
-    // asObservable() ne permite sa ne abonam la obiectul itemObservable
+  public getItemsList(){
+    // asObservable() = ne permite sa ne abonam la obiectul itemObservable
     return this.itemObservable.asObservable()
   }
 

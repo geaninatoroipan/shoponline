@@ -37,7 +37,7 @@ export class HomeComponent {
       this.itemService.create(this.itemForm.value).subscribe((response : any) =>{
         console.log(response);
         alert(response.message);
-        // dupa fiecare actiune de create, edit, delete apelam read() pentru a actualiza informatiile din baza de date
+        // dupa fie care actiune de create, edit, delete apelam read() pentru a acutaliza informatile din baza de date
         this.itemService.read();
       });
     }else {

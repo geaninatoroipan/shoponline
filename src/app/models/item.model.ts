@@ -1,4 +1,4 @@
-export class Item {
+export class Item{
   private _id:string;
   private _title:string;
   private _description:string;
@@ -12,7 +12,6 @@ export class Item {
     this._imageUrl = imageUrl;
     this._price = price;
   }
-
 
   get id(): string {
     return this._id;

@@ -5,14 +5,14 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 
 export const routes: Routes = [
   {
-    // http://localhost:p4200/home
-    path: "home", component: HomeComponent,
+    // http://localhost:4200/home
+    path:"home", component: HomeComponent,
   },
   {
-    // http://localhost:p4200/auth
-    path: "auth", component: AuthComponent,
+    // http://localhost:4200/auth
+    path:"auth", component: AuthComponent,
   },
   {
-    path: "admin", component : DashboardComponent,
+    path:"admin", component: DashboardComponent,
   }
 ];
